@@ -1,14 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Diagnostics.CodeAnalysis;
 
 namespace PlanetWeights.Pages
 {
+    [ExcludeFromCodeCoverage]
     public class PlanetWeightsModel : PageModel
     {
         [BindProperty]      // bound on POST request
         public PlanetWeight planetWeight { get; set; }
 
-
+        [ExcludeFromCodeCoverage]
         // POST, validate
         public IActionResult OnPost()
         {
